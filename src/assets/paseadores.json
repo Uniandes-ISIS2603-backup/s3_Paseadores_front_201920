@@ -1,0 +1,12 @@
+[
+    {
+        "foto": "https://clubdelcanino.com/wp-content/uploads/2018/03/Cuanto-cobra-un-paseador-de-perros.jpg",
+        "precio": 5000,
+        "ganancias": 100000,
+        "infoAdicional": "Me encanta sacar perros",
+        "nombre": "Pedro Picapiedra",
+        "correo": "pedro@gmail.com",
+        "contrasena": "aaa333",
+        "infoContacto": "Pedro Picapiedra, 3145678900, Universidad de los Andes"
+    }
+]

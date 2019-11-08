@@ -14,7 +14,7 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
-
+import { PaseadorModule } from './paseador/paseador.module';
 
 
 
@@ -24,6 +24,11 @@ import {AuthModule} from './auth/auth.module';
         AppComponent
     ],
     imports: [
+
+
+        PaseadorModule,
+
+
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
