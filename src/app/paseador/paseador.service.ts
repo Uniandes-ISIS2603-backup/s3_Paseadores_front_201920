@@ -15,7 +15,15 @@ const paseadores = "paseadores.json";
 export class PaseadorService {
 
   constructor(private http: HttpClient) { }
+
   getPaseadores(): Observable<Paseador[]>{
     return this.http.get<Paseador[]>(API_URL + paseadores);
   }
+
+
+  getPaseadoresFiltro(): Observable<Array<Paseador>>{
+    return this.http.get<Array<Paseador>>(API_URL + paseadores);
+  }
+
+
 }

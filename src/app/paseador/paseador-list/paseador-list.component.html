@@ -1,28 +1,167 @@
-<div class = "container-fluid"> 
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<div class = "row">
 
-<div class="col-2">
-</div>
 
-<div class="col-4">
-    <div class="card" style="width: 18rem;" *ngFor = "let p of paseadores">
-        <img src={{p.foto}} class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{p.nombre}}</h5>
-          <p class="card-text">{{p.infoAdicional}}</p>
-          <a href="#" class="btn btn-primary">Ver</a>
+<div class = "container-fluid">
+
+  <div class = "row">
+
+      <div class = "col-4">
+          <div class="card" style = "font-size: 14px">
+              <article class="card-group-item">
+                  <header class="card-header">
+                      <h6 class="title" style = "font-size: 16px">Filtrar por precio</h6>
+                  </header>
+                  <div class="filter-content">
+                      <div class="card-body">
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>Min</label>
+                        <input type="text" style = "font-size: 14px" class="form-control" id="inputMin" placeholder="$0">
+                      </div>
+                      <div class="form-group col-md-6 text-right">
+                        <label>Max</label>
+                        <input type="text" class="form-control" placeholder="$25000" id="inputMax">
+                        <br>
+
+                        <button id = "button-filterByPrice" type="button" class="btn btn-secondary" (click) = "getPaseadoresFiltroPrecio()">Buscar</button>
+
+                      </div>
+                      </div>
+                      </div> <!-- card-body.// -->
+                  </div>
+              </article> <!-- card-group-item.// -->
+              <article class="card-group-item">
+                  <header class="card-header">
+                      <h6 class="title" style = "font-size: 16px">Filtrar por zona</h6>
+                  </header>
+                  <div class="filter-content">
+                      <div class="car d-body">
+                          <div class="custom-control custom-checkbox">
+                                  <span class="float-right badge badge-light round">57</span>
+                                <input type="checkbox" class="custom-control-input" id="Check1">
+                                <label class="custom-control-label" for="Check1"> &nbsp;&nbsp;&nbsp; Suba</label>
+                          </div> <!-- form-check.// -->
+          
+                          <div class="custom-control custom-checkbox">
+                              <span class="float-right badge badge-light round">132</span>
+                                <input type="checkbox" class="custom-control-input" id="Check2">
+                               <label class="custom-control-label" for="Check2">&nbsp;&nbsp;&nbsp; Usaquen</label>
+                          </div> <!-- form-check.// -->
+          
+                          <div class="custom-control custom-checkbox">
+                              <span class="float-right badge badge-light round">17</span>
+                                <input type="checkbox" class="custom-control-input" id="Check3">
+                                <label class="custom-control-label" for="Check3">&nbsp;&nbsp;&nbsp; Chapinero</label>
+                          </div> <!-- form-check.// -->
+          
+                          <div class="custom-control custom-checkbox">
+                              <span class="float-right badge badge-light round">7</span>
+                                <input type="checkbox" class="custom-control-input" id="Check4">
+                                <label class="custom-control-label" for="Check4">&nbsp;&nbsp;&nbsp; Fontibon</label>
+                          </div> <!-- form-check.// -->
+                      </div> <!-- card-body.// -->
+                  </div>
+              </article> <!-- card-group-item.// -->
+          </div> <!-- card.// -->
+    
+          <div class="card">
+              
+                  <div class="container">
+                          <h6 class="page-header" style = "font-size: 16px">Filtrar por califiación</h6>
+                          <div class="row">
+                            <div class="col-sm-12">
+    
+                              <div class= "row">
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
+                                       <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                      <p>&nbsp;</p>
+                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
+                              </div>
+    
+                          </div>
+                          </div>
+                          <br />
+                        </div>
+    
+    
+          </div>
         </div>
-      </div>
-  </div>
 
-  <div class="col-4">
+    <div class = "col-8">
+<!--Lista de paseadores-->
+      <div class="well well-sm" style="background-color:white">
+          <div class="row" *ngFor = "let p of paseadores">
+              <div class="col-sm-6 col-md-4">
+                  <img src={{p.foto}} alt="" class="img-rounded img-responsive" />
+              </div>
+              <div class="col-sm-6 col-md-8">
+                  <h3> {{p.nombre}} </h3>
+           
+                  <h4>
+                      <i class="glyphicon glyphicon-user"></i>{{p.infoAdicional}}
+                      <br/>
+                      <i class="glyphicon glyphicon-envelope"></i>{{p.correo}}
+                      <br />
+                      <i class="glyphicon glyphicon-euro"></i>{{p.precio}}</h4>
+                  <!-- Split button -->
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-primary">
+                          Ver más informacion
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
 
     </div>
 
-<div class="col-2">
-</div>
+
+
+  </div>
 
 </div>
 
-</div>
+
+
+
+            
