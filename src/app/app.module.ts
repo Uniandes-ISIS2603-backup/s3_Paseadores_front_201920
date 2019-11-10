@@ -15,7 +15,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
 import { PaseadorModule } from './paseador/paseador.module';
-
+import { PagoModule } from './pago/pago.module';
 
 
 
@@ -25,7 +25,7 @@ import { PaseadorModule } from './paseador/paseador.module';
     ],
     imports: [
 
-
+        PagoModule,
         PaseadorModule,
 
 

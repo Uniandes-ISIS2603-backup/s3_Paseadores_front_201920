@@ -9,11 +9,12 @@ import { PaseadorService } from '../paseador.service';
 })
 export class PaseadorListComponent implements OnInit {
   paseadores: Paseador[];
+
+  
   constructor(private paseadorService: PaseadorService) { }
   getPaseadores(): void{
     this.paseadorService.getPaseadores().subscribe(paseadores =>
       this.paseadores = paseadores);
-    
   }
 
   ngOnInit() {

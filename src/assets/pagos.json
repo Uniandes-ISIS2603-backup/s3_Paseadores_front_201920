@@ -1,0 +1,26 @@
+[
+    {
+        "idUsuario": "9848",
+        "idPaseador": "777",
+        "valorServicio": 100000,
+        "pagoRealizado": false
+    },
+    {
+        "idUsuario": "9848",
+        "idPaseador": "777",
+        "valorServicio": 100000,
+        "pagoRealizado": false
+    },
+    {
+        "idUsuario": "9848",
+        "idPaseador": "777",
+        "valorServicio": 100000,
+        "pagoRealizado": true
+    },
+    {
+        "idUsuario": "9848",
+        "idPaseador": "777",
+        "valorServicio": 100000,
+        "pagoRealizado": false
+    }
+]

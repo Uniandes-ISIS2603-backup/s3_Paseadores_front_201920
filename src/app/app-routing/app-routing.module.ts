@@ -5,44 +5,25 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { PagoDetailComponent } from '../pago/pago-detail/pago-detail.component';
+import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 
 const routes: Routes = [
 
-     {
-        path: 'auth',
-        children: [
-            {
-                path: 'login',
-                component: AuthLoginComponent,
-                canActivate: [NgxPermissionsGuard],
-                data: {
-                    permissions: {
-                        only: ['GUEST']
-                    }
-                }
-            },
-            {
-                path: ':sign-up',
-                component: AuthSignUpComponent,
-                canActivate: [NgxPermissionsGuard],
-                data: {
-                    permissions: {
-                        only: ['GUEST']
-                    }
-                }
-            }
-        ]
-    },
     {
-        path: 'home',
-        component: AuthLoginComponent
-    },
-    {
-        path: '**',
-        redirectTo: 'home',
+      path: 'editorials',
+      children: [{
+        path: 'list',
+        component: PagoListComponent
+      },
+      {
+        path: ':id',
+        component: PagoDetailComponent,
+        outlet: 'detail'
+      }
+      ]
     }
-];
-
+  ];
 @NgModule({
     imports: [
         CommonModule,
