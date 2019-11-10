@@ -4,6 +4,9 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+<body tag=body >
+
+
 <div class="container-fluid">
     <div class = "row">
         <div class = "col-md-12">
@@ -38,7 +41,7 @@
                         <label>Precio Paseo</label>
                     </div>
                     <div class = "col-6">
-                        <p>{{p.precio}}</p>
+                        <p>{{p.precio}} pesos</p>
                     </div>
                 </div>
                 <div class = "row" *ngFor = "let p of paseadores">
@@ -64,7 +67,7 @@
                         Información del Cliente: 
                     </h3>
                     <br>
-                    <div class = "row" *ngFor = "let p of paseadores">
+                    <div class = "row" >
                     <div class = "col-6">
                         <label>Nombre</label>
                     </div>
@@ -72,7 +75,7 @@
                         <p>Andrés Rojas</p>
                     </div>
                 </div>
-                <div class = "row" *ngFor = "let p of paseadores">
+                <div class = "row">
                         <div class = "col-6">
                             <label>Correo</label>
                         </div>
@@ -80,7 +83,7 @@
                             <p>andres@gmail.com</p>
                         </div>
                     </div>
-                    <div class = "row" *ngFor = "let p of paseadores">
+                    <div class = "row" >
                             <div class = "col-6">
                                 <label>Información contacto</label>
                             </div>
@@ -88,7 +91,7 @@
                                 <p>3124356432</p>
                             </div>
                         </div>
-                        <div class = "row" *ngFor = "let p of paseadores">
+                        <div class = "row" >
                                 <div class = "col-6">
                                     <label>Mascotas a pasear</label>
                                 </div>
@@ -104,12 +107,15 @@
     <br>
     <div class = "row">
         <div class = "col-6">
-             <select>
-        <option selected>Seleccionar método de pago</option>
-        <option><a class="nav-link active" routerLink="pago/detail" routerLinkActive="active">Tarjeta de Crédito</a></option>
-        <option>Tarjeta débito</option>
-        <option>PSE</option>
-    </select>
+                        <a style="font-size: large " class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Selecciona el método de pago</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="btn btn-warning" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >Tarjeta de crédito</a>
+                                <a class="btn btn-success" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >Tarjeta débito</a>
+                                <a class="btn btn-info" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >PSE</a>
+                        </div>
         </div>
     </div>
 </div>
+
+</body>

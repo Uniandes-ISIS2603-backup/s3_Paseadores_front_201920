@@ -11,13 +11,13 @@ import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 const routes: Routes = [
 
     {
-      path: 'editorials',
+      path: 'pago',
       children: [{
-        path: 'list',
-        component: PagoListComponent
+        path: 'detail',
+        component: PagoDetailComponent
       },
       {
-        path: ':id',
+        path: ':valorServicio',
         component: PagoDetailComponent,
         outlet: 'detail'
       }
