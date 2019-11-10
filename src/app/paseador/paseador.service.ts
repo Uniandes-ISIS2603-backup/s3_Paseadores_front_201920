@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Paseador } from './paseador';
+import { PaseadorDetail } from './paseador-detail';
 
 const API_URL = "../../assets/";
 const paseadores = "paseadores.json";
@@ -21,8 +22,9 @@ export class PaseadorService {
   }
 
 
-  getPaseadoresFiltro(): Observable<Array<Paseador>>{
-    return this.http.get<Array<Paseador>>(API_URL + paseadores);
+  getPaseadorDetail(paseadorId): Observable<PaseadorDetail> {
+    return this.http.get<PaseadorDetail>(API_URL + "paseador" + paseadorId + ".json"
+    );
   }
 
 

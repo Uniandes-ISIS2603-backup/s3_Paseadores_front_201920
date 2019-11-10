@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
        /**
      * @ignore
      */
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService) {  }
 
     logout(): void {
         this.authService.logout()

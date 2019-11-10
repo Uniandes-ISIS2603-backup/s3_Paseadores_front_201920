@@ -1,0 +1,115 @@
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container-fluid">
+    <div class = "row">
+        <div class = "col-md-12">
+            <h1> 
+                Contrato
+            </h1>
+            <br>
+            <h3>
+                Información del paseador: 
+            </h3>
+            <br>
+            <div class = "row" *ngFor = "let p of paseadores">
+            <div class = "col-6">
+                <label>Nombre</label>
+            </div>
+            <div class = "col-6">
+                <p>{{p.nombre}}</p>
+            </div>
+        </div>
+        <div class = "row" *ngFor = "let p of paseadores">
+                <div class = "col-6">
+                    <label>
+                        Correo 
+                    </label>
+                </div>
+                <div class = "col-6">
+                    <p>{{p.correo}}</p>
+                </div>
+            </div>
+            <div class = "row" *ngFor = "let p of paseadores">
+                    <div class = "col-6">
+                        <label>Precio Paseo</label>
+                    </div>
+                    <div class = "col-6">
+                        <p>{{p.precio}}</p>
+                    </div>
+                </div>
+                <div class = "row" *ngFor = "let p of paseadores">
+                        <div class = "col-6">
+                            <label>Información contacto</label>
+                        </div>
+                        <div class = "col-6">
+                            <p>{{p.infoContacto}}</p>
+                        </div>
+                    </div>
+                </div>
+        <div class = "col-md-12">
+                <h1 style = "color: white"> 
+                        Contrato
+                    </h1>
+                    <br>             
+        </div>
+    </div>
+  
+    <div class="row">
+            <div class = "col-md-12">
+                    <h3>
+                        Información del Cliente: 
+                    </h3>
+                    <br>
+                    <div class = "row" *ngFor = "let p of paseadores">
+                    <div class = "col-6">
+                        <label>Nombre</label>
+                    </div>
+                    <div class = "col-6">
+                        <p>Andrés Rojas</p>
+                    </div>
+                </div>
+                <div class = "row" *ngFor = "let p of paseadores">
+                        <div class = "col-6">
+                            <label>Correo</label>
+                        </div>
+                        <div class = "col-6">
+                            <p>andres@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class = "row" *ngFor = "let p of paseadores">
+                            <div class = "col-6">
+                                <label>Información contacto</label>
+                            </div>
+                            <div class = "col-6">
+                                <p>3124356432</p>
+                            </div>
+                        </div>
+                        <div class = "row" *ngFor = "let p of paseadores">
+                                <div class = "col-6">
+                                    <label>Mascotas a pasear</label>
+                                </div>
+                                <div class = "col-6">
+                                    <p>Perro Bernés</p>
+                                    <p>Perro Labrador</p>
+                                    <p>Perro Pastor Alemán</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div class = "col-6">
+             <select>
+        <option selected>Seleccionar método de pago</option>
+        <option><a class="nav-link active" routerLink="pago/detail" routerLinkActive="active">Tarjeta de Crédito</a></option>
+        <option>Tarjeta débito</option>
+        <option>PSE</option>
+    </select>
+        </div>
+    </div>
+</div>

@@ -32,7 +32,6 @@ export class PaseadorListComponent implements OnInit {
     
   }
 
-
   getPaseadoresFiltroPrecio(): void {
 
   let inputMinBox: HTMLElement = document.getElementById("inputMin");

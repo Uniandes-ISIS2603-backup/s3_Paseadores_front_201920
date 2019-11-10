@@ -11,6 +11,7 @@
         "infoContacto": "Pedro Picapiedra, 3145678900, Universidad de los Andes"
     },
     {
+        "id": 2,
         "foto": "https://cdn.pixabay.com/photo/2018/09/15/19/23/avatar-3680134_960_720.png",
         "precio": 7500,
         "ganancias": 50000,
@@ -21,6 +22,7 @@
         "infoContacto": "Mario Hurtado, 301893823, Usaquen"
     },
     {
+        "id": 3,
         "foto": "https://clubdelcanino.com/wp-content/uploads/2018/03/Cuanto-cobra-un-paseador-de-perros.jpg",
         "precio": 5000,
         "ganancias": 100000,
@@ -31,6 +33,7 @@
         "infoContacto": "Santiago Bolanos, 3105678810, Suba"
     },
     {
+        "id": 3,
         "foto": "https://clubdelcanino.com/wp-content/uploads/2018/03/Cuanto-cobra-un-paseador-de-perros.jpg",
         "precio": 10000,
         "ganancias": 100000,
@@ -41,6 +44,7 @@
         "infoContacto": "Daniel Garcia, 3125678900, Universidad de los Andes"
     },
     {
+        "id": 4,
         "foto": "https://clubdelcanino.com/wp-content/uploads/2018/03/Cuanto-cobra-un-paseador-de-perros.jpg",
         "precio": 8000,
         "ganancias": 100000,
@@ -52,6 +56,7 @@
     },
 
     {
+        "id": 5,
         "foto": "https://clubdelcanino.com/wp-content/uploads/2018/03/Cuanto-cobra-un-paseador-de-perros.jpg",
         "precio": 1000,
         "ganancias": 100000,

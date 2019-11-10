@@ -1,0 +1,11 @@
+{
+    "id": 2,
+    "foto": "https://cdn.pixabay.com/photo/2018/09/15/19/23/avatar-3680134_960_720.png",
+    "precio": 7500,
+    "ganancias": 50000,
+    "infoAdicional": "Soy una persona alegre",
+    "nombre": "Mario Hurtado",
+    "correo": "marioh@gmail.com",
+    "contrasena": "mario123",
+    "infoContacto": "Mario Hurtado, 301893823, Usaquen"
+}
