@@ -6,7 +6,7 @@ import { Paseador } from '../../paseador/paseador';
 import {ActivatedRoute} from '@angular/router';
 import 'rxjs/add/operator/filter';
 import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
-import { PaseadorDetail } from 'src/app/paseador/paseador-detail';
+import { PaseadorDetail } from '../../paseador/paseador-detail';
 
 @Component({
   selector: 'app-pago-list',

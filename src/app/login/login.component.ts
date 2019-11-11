@@ -6,6 +6,8 @@ import { Paseador } from '../paseador/paseador';
 import {PaseadorCreateComponent} from '../paseador/paseador-create/paseador-create.component';
 import { PaseadorService } from '../paseador/paseador.service';
 import { ToastrService } from 'ngx-toastr';
+import { Cliente } from '../cliente/cliente';
+import { ClienteService } from '../cliente/cliente.service';
 
 
 
@@ -20,12 +22,13 @@ export class LoginComponent implements OnInit {
   @Output() cancel = new EventEmitter;
   @Output() create = new EventEmitter;
 
-  constructor(private paseadorService: PaseadorService,
+  constructor(private paseadorService: PaseadorService, private clienteService: ClienteService,
     private toastrService: ToastrService, private route: ActivatedRoute) { }
 
 
 
   paseador: Paseador;
+  cliente: Cliente;
 
   pc: number;
 
@@ -48,6 +51,7 @@ export class LoginComponent implements OnInit {
   getInfo(): void {
 
     this.paseador = new Paseador(); 
+    this.cliente = new Cliente();
 
     let inputCorreo: HTMLElement = document.getElementById("correo");
     let inputContrasena: HTMLElement = document.getElementById("contrasena");
@@ -83,6 +87,16 @@ export class LoginComponent implements OnInit {
     } else {
 
 
+      this.cliente.correo = correo;
+      this.cliente.contrasena = contrasena;
+      this.cliente.nombre = nombreCompleto;
+  
+      //Por default
+      this.cliente.infoContacto = "Informacion de contacto";
+
+
+      //Se crea el cliente
+      this.createCliente();
 
     }
 
@@ -104,7 +118,7 @@ export class LoginComponent implements OnInit {
           this.paseador = paseador;
           this.create.emit();
           this.toastrService.success("The Paseador was created", "Paseador creation");
-          alert("Usuario creado con exito!");
+          alert("Paseador creado con exito!");
 
         },
 
@@ -119,6 +133,31 @@ export class LoginComponent implements OnInit {
     return this.paseador;
 
   }
+
+
+  createCliente() {
+
+
+    this.clienteService.createCliente(this.cliente).subscribe(
+      (cliente) => {
+        this.cliente = cliente;
+        this.create.emit();
+        this.toastrService.success("The Cliente was created", "Cliente creation");
+        alert("Cliente creado con exito!");
+
+      },
+
+    err => {
+
+      this.toastrService.error(err, "Error");
+
+    }
+
+  );
+
+  return this.cliente;
+
+}
 
   ngOnInit() {
   }

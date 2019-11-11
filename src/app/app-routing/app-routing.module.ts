@@ -11,6 +11,9 @@ import { PaseadorDetailComponent } from '../paseador/paseador-detail/paseador-de
 import { PaseadorListComponent } from '../paseador/paseador-list/paseador-list.component';
 import { LoginComponent } from '../login/login.component';
 import { PaseadorCreateComponent } from '../paseador/paseador-create/paseador-create.component';
+import { Cliente } from '../cliente/cliente';
+import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
+import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
 
 const routes: Routes = [
 
@@ -61,6 +64,26 @@ const routes: Routes = [
 
   }
   ]
+},
+
+{
+      
+  path: 'clientes',
+
+children: [{
+
+  path: 'list',
+  component: ClienteListComponent
+
+},
+{
+
+  path: ':id',
+  component: ClienteDetailComponent,
+  outlet:'detail'
+
+}
+]
 }
 
 
