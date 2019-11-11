@@ -9,6 +9,7 @@ import { PagoDetailComponent } from '../pago/pago-detail/pago-detail.component';
 import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { PaseadorDetailComponent } from '../paseador/paseador-detail/paseador-detail.component';
 import { PaseadorListComponent } from '../paseador/paseador-list/paseador-list.component';
+import { LoginComponent } from '../login/login.component';
 
 const routes: Routes = [
 
@@ -46,7 +47,20 @@ const routes: Routes = [
 
     }
     ]
+  },
+
+  {
+      
+    path: 'login',
+
+  children: [{
+
+    path: 'registro',
+    component: LoginComponent
+
   }
+  ]
+}
 
 
   ];

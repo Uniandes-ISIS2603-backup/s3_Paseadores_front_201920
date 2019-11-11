@@ -16,12 +16,13 @@ import {AuthModule} from './auth/auth.module';
 
 import { PaseadorModule } from './paseador/paseador.module';
 import { PagoModule } from './pago/pago.module';
-
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        LoginComponent
     ],
     imports: [
 

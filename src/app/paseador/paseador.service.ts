@@ -28,4 +28,10 @@ export class PaseadorService {
   }
 
 
+   createPaseador(paseador): Observable<Paseador> {
+
+    return this.http.post<Paseador>(API_URL + paseadores, paseador);
+}
+
+
 }
