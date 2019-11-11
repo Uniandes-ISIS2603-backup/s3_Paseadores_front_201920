@@ -19,7 +19,13 @@ export class PaseadorDetailComponent implements OnInit {
     paseadorDetail: PaseadorDetail;
 
     paseador_id: number;
-  
+    
+
+    getPaseadorDetailActual(): PaseadorDetail {
+
+      return this.paseadorDetail;
+
+    }
 
 
     getPaseadorDetail(): void {

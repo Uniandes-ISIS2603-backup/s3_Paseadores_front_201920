@@ -13,6 +13,7 @@ import { PaseadorListComponent } from '../paseador/paseador-list/paseador-list.c
 const routes: Routes = [
 
     {
+
       path: 'paseadores',
       children: [
         {
@@ -22,11 +23,34 @@ const routes: Routes = [
         },
       {
         path: ':id',
-        component: PaseadorDetailComponent,
+        component: PaseadorDetailComponent
       }
       ]
+    },
+
+
+    {
+      
+      path: 'pago',
+
+    children: [{
+
+      path: ':id',
+      component: PagoListComponent
+
+    }, {
+
+      path: ':valorServicio',
+      component: PagoDetailComponent,
+      outlet:'detail'
+
     }
+    ]
+  }
+
+
   ];
+
 @NgModule({
     imports: [
         CommonModule,

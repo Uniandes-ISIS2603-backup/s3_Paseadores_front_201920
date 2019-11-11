@@ -8,6 +8,6 @@ export class PaseadorDetail extends Paseador{
     infoAdicional:string;
     correo: string;
     infoContacto: string;
-
+    id: number;
 
 }

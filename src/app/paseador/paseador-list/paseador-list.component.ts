@@ -86,7 +86,6 @@ export class PaseadorListComponent implements OnInit {
 
   }
 
-
   ngOnInit() {
     this.getPaseadores();
   }
