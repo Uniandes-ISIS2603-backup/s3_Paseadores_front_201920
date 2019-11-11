@@ -2,12 +2,13 @@ import { Paseador } from "./paseador";
 
 export class PaseadorDetail extends Paseador{
 
-    nombre: string;
     foto: string;
     precio: number;
-    infoAdicional:string;
+    ganancias: number;
+    infoAdicional: string;
+    nombre: string;
     correo: string;
+    contrasena: string;
     infoContacto: string;
-    id: number;
 
 }

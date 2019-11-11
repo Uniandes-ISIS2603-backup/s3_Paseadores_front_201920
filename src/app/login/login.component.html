@@ -1,97 +1,94 @@
-
-
-
 <section class="login-block">
-    <div class="container">
-	<div class="row">
-		<div class="col-md-4 login-sec">
-		    <h2 class="text-center">Registrarse</h2>
-		    <form class="login-form">
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="text-uppercase" *ngIf="paseador.get('correo').hasError('required') && 
-    paseador.get('correo').touched">Correo</label>
-    <input type="text" class="form-control" placeholder="">
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="text-uppercase">Contraseña</label>
-    <input type="password" class="form-control" placeholder="">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="text-uppercase">Nombre</label>
-    <input type="text" class="form-control" placeholder="">
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="text-uppercase">Apellido</label>
-    <input type="text" class="form-control" placeholder="">
-    
-  </div>
-   <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                <option>Seleccionar tipo</option>
-                                <option>Cliente</option>
-                                <option>Paseador</option>
-                                
-                            </select>
-                        </div>
-    <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      <small>Recordarme en este dispositivo &nbsp;</small>
-    </label>
-    <button type="submit" class="btn btn-login float-center">Iniciar</button>
-  </div>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Registrarse</h2>
+                <form class="login-form">
+      <div class="form-group">
+          <label for="exampleInputEmail1" class="text-uppercase">Correo</label>
+        <input type="text" class="form-control" placeholder="" id = "correo">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="text-uppercase">Contraseña</label>
+        <input type="password" class="form-control" placeholder="" id = "contrasena">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="text-uppercase">Nombre</label>
+        <input type="text" class="form-control" placeholder="" id = "nombre">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="text-uppercase">Apellido</label>
+        <input type="text" class="form-control" placeholder="" id = "apellido">
+        
+      </div>
+       <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+          <a style="font-size: large " class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Cliente o Paseador?</a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="btn btn-default" (click) = "isCliente()">Cliente</a>
+               <a class="btn btn-default" (click) = "isPaseador()">Paseador</a>
+       </div>
 
-  
-
-   
-  <br>
- 
-  
-</form>
-<div class="copy-text">¿No estas registrado? 
- <button type="submit" class="btn btn-login float-right" [disabled]="desarrolladorForm.invalid" >Registrate aquí</button></div>
-		</div>
-		<div class="col-md-8 banner-sec">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-            <div class="carousel-inner" role="listbox">
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="http://www.4usky.com/data/out/28/164228743-dog-wallpapers.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>CANEM</h2>
-            <p>Somos amigos de tu mejor amigo
-            </p>
-        </div>	
-  </div>
+       <p id= "pc"></p>
+                            </div>
+        <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          <small>Recordarme en este dispositivo &nbsp;</small>
+        </label>
+      </div>
+    
+      
+    
+       
+      <br>
+     
+      
+    </form>
+    <div class="copy-text">¿No estas registrado? 
+     <button type="submit" class="btn btn-login float-right" (click) = "getInfo()" >Registrate aquí</button></div>
+            </div>
+            <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                <div class="carousel-inner" role="listbox">
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="http://eskipaper.com/images/cute-dogs-13.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="banner-text">
+                <h2>CANEM</h2>
+                <p>Somos amigos de tu mejor amigo
+                </p>
+            </div>	
+      </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="https://images.wallpaperscraft.com/image/puppies_couple_blue_face_cute_dog_56037_1280x960.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="banner-text">
+                <h2>CANEM</h2>
+               <p>Somos amigos de tu mejor amigo</p>
+            </div>	
+        </div>
+        </div>
+        <div class="carousel-item active">
+          <img class="d-block img-fluid" src="https://4hdwall.com/wp-content/uploads/2017/09/cute-happy-dogs-hd-wall.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="banner-text">
+                <h2>CANEM</h2>
+                <p>Somos amigos de tu mejor amigo 
+                </p>
+            </div>	
+        </div>
+      </div>
+                </div>	   
+                
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://images.wallpaperscraft.com/image/puppies_couple_blue_face_cute_dog_56037_1280x960.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>CANEM</h2>
-           <p>Somos amigos de tu mejor amigo</p>
-        </div>	
-    </div>
-    </div>
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="https://4hdwall.com/wp-content/uploads/2017/09/cute-happy-dogs-hd-wall.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>CANEM</h2>
-            <p>Somos amigos de tu mejor amigo 
-            </p>
-        </div>	
-    </div>
-  </div>
-            </div>	   
-		    
-		</div>
-	</div>
-</div>

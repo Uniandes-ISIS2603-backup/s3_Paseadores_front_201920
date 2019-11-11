@@ -21,19 +21,12 @@ export class PaseadorDetailComponent implements OnInit {
     paseador_id: number;
     
 
-    getPaseadorDetailActual(): PaseadorDetail {
-
-      return this.paseadorDetail;
-
-    }
-
 
     getPaseadorDetail(): void {
 
       this.paseadorService.getPaseadorDetail(this.paseador_id).subscribe(o => {
         this.paseadorDetail = o;
       });
-
     }
   
   

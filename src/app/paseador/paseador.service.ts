@@ -3,9 +3,10 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Paseador } from './paseador';
 import { PaseadorDetail } from './paseador-detail';
+import {environment} from '../../environments/environment';
 
-const API_URL = "../../assets/";
-const paseadores = "paseadores.json";
+const API_URL = environment.apiURL+"/";
+const paseadores = "paseadores/";
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,7 @@ export class PaseadorService {
 
 
   getPaseadorDetail(paseadorId): Observable<PaseadorDetail> {
-    return this.http.get<PaseadorDetail>(API_URL + "paseador" + paseadorId + ".json"
-    );
+    return this.http.get<PaseadorDetail>(API_URL + paseadores + paseadorId);
   }
 
 

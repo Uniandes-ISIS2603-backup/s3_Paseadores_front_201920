@@ -10,6 +10,7 @@ import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 import { PaseadorDetailComponent } from '../paseador/paseador-detail/paseador-detail.component';
 import { PaseadorListComponent } from '../paseador/paseador-list/paseador-list.component';
 import { LoginComponent } from '../login/login.component';
+import { PaseadorCreateComponent } from '../paseador/paseador-create/paseador-create.component';
 
 const routes: Routes = [
 

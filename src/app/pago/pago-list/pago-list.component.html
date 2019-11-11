@@ -52,70 +52,76 @@
                             <p>{{paseador.infoContacto}}</p>
                         </div>
                     </div>
-                </div>
-        <div class = "col-md-12">
-                <h1 style = "color: white"> 
-                        Contrato
-                    </h1>
-                    <br>             
-        </div>
-    </div>
-  
-    <div class="row">
-            <div class = "col-8">
+
                     <h3>
-                        Información del Cliente: 
-                    </h3>
-                    <br>
-                    <div class = "row" >
-                    <div class = "col-6">
-                        <label>Nombre</label>
-                    </div>
-                    <div class = "col-6">
-                        <p>Andrés Rojas</p>
-                    </div>
-                </div>
-                <div class = "row">
+                            Información del Cliente: 
+                        </h3>
+                        <br>
+                        <div class = "row" >
                         <div class = "col-6">
-                            <label>Correo</label>
+                            <label>Nombre</label>
                         </div>
                         <div class = "col-6">
-                            <p>andres@gmail.com</p>
+                            <p>Andrés Rojas</p>
                         </div>
                     </div>
-                    <div class = "row" >
+                    <div class = "row">
                             <div class = "col-6">
-                                <label>Información contacto</label>
+                                <label>Correo</label>
                             </div>
                             <div class = "col-6">
-                                <p>3124356432</p>
+                                <p>andres@gmail.com</p>
                             </div>
                         </div>
                         <div class = "row" >
                                 <div class = "col-6">
-                                    <label>Mascotas a pasear</label>
+                                    <label>Información contacto</label>
                                 </div>
                                 <div class = "col-6">
-                                    <p>Perro Bernés</p>
-                                    <p>Perro Labrador</p>
-                                    <p>Perro Pastor Alemán</p>
-                                    
+                                    <p>3124356432</p>
                                 </div>
                             </div>
+                            <div class = "row" >
+                                    <div class = "col-6">
+                                        <label>Mascotas a pasear</label>
+                                    </div>
+                                    <div class = "col-6">
+                                        <p>Perro Bernés</p>
+                                        <p>Perro Labrador</p>
+                                        <p>Perro Pastor Alemán</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class = "col-4">
+                                        <a style="font-size: large " class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">Selecciona el método de pago</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="btn btn-warning" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >Tarjeta de crédito</a>
+                                                <a class="btn btn-success" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >Tarjeta débito</a>
+                                                <a class="btn btn-info" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >PSE</a>
+                                        </div>
                         </div>
+                </div>
+
+                <div class = "col-4">
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                </div>
+
+
+
     </div>
-    <br>
-    <div class = "row">
-        <div class = "col-4">
-                        <a style="font-size: large " class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">Selecciona el método de pago</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="btn btn-warning" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >Tarjeta de crédito</a>
-                                <a class="btn btn-success" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >Tarjeta débito</a>
-                                <a class="btn btn-info" [routerLink] ="['/pago', { outlets: { 'detail': [1] } }]" >PSE</a>
-                        </div>
-        </div>
-    </div>
+  
+    
+    
 </div>
 
 </body>
