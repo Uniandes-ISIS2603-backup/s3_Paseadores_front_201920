@@ -14,6 +14,8 @@ import { PaseadorCreateComponent } from '../paseador/paseador-create/paseador-cr
 import { Cliente } from '../cliente/cliente';
 import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
+import { ZonaListComponent } from '../zona/zona-list/zona-list.component';
+import { ZonaDetailComponent } from '../zona/zona-detail/zona-detail.component'
 
 const routes: Routes = [
 
@@ -84,6 +86,20 @@ children: [{
 
 }
 ]
+},
+{
+  path: 'zonas',
+  children: [
+    {
+      path:'list',
+      component: ZonaListComponent
+    },
+    {
+      path: ':id',
+      component: ZonaDetailComponent,
+      outlet:'detail'
+    }
+  ]
 }
 
 
