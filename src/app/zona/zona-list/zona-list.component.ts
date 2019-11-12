@@ -19,7 +19,7 @@ export class ZonaListComponent implements OnInit {
 
   zonas : Zona[];
 
-  zona: Zona =new Zona();;
+  zona: Zona =new Zona();
 
   getZonas(): void {
     this.zonaService.getZonas().subscribe( zonas =>
