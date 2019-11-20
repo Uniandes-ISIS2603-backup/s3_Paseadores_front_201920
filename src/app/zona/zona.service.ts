@@ -24,7 +24,6 @@ export class ZonaService {
   }
 
   createZona( zona ): Observable<Zona>{
-    alert(API_URL+zonas );
     return this.http.post<Zona>(API_URL+zonas ,zona );
   }
 }
