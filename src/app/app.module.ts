@@ -19,15 +19,18 @@ import { PagoModule } from './pago/pago.module';
 import { LoginComponent } from './login/login.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { ZonaModule } from './zona/zona.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent,
+        LoginComponent
+
     ],
     imports: [
 
+        HomeModule,
         PagoModule,
         PaseadorModule,
         ClienteModule,

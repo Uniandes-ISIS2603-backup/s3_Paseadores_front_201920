@@ -8,6 +8,7 @@ import { PaseadorService } from '../paseador/paseador.service';
 import { ToastrService } from 'ngx-toastr';
 import { Cliente } from '../cliente/cliente';
 import { ClienteService } from '../cliente/cliente.service';
+import { Calificacion } from '../calificacion/calificacion';
 
 
 
@@ -76,10 +77,11 @@ export class LoginComponent implements OnInit {
       //Por default
   
       this.paseador.foto = "https://png.pngtree.com/svg/20170602/avatar_107646.png";
-      this.paseador.precio = 7000;
+      this.paseador.precio = 5000;
       this.paseador.ganancias = 0;
       this.paseador.infoAdicional = "Me encantan los canes!";
       this.paseador.infoContacto = "Informacion de contacto";
+
 
     //Se crea el paseador
     this.createPaseador();
@@ -127,6 +129,7 @@ export class LoginComponent implements OnInit {
         this.toastrService.error(err, "Error");
 
       }
+
 
     );
 

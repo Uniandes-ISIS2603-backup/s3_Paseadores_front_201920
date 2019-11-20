@@ -16,6 +16,7 @@ import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.compo
 import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
 import { ZonaListComponent } from '../zona/zona-list/zona-list.component';
 import { ZonaDetailComponent } from '../zona/zona-detail/zona-detail.component'
+import { HomeComponent } from '../home/home/home.component';
 
 const routes: Routes = [
 
@@ -98,6 +99,16 @@ children: [{
       path: ':id',
       component: ZonaDetailComponent,
       outlet:'detail'
+    }
+  ]
+},
+
+{
+  path: 'inicio',
+  children: [
+    {
+      path:'home',
+      component: HomeComponent
     }
   ]
 }

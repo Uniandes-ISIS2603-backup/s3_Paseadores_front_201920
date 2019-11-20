@@ -1,0 +1,27 @@
+
+#imgPrincipal {
+
+    width: auto;
+    height: 520px;
+
+}
+
+
+#text {
+    text-align: center;
+    font-family: 'Candara';
+    font-weight: bold;
+  }
+
+#playbutton {
+
+    font-size: 36px;
+
+}
+
+#imgbutton {
+
+    height: 50px;
+    width: 55px;
+
+}

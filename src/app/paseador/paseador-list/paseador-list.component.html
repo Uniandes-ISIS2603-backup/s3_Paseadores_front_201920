@@ -3,6 +3,21 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
+<script language="javascript">
+    alert("HOLA");
+        //VALIDACION CHECKBOX
+        function validacion(formu, obj) {
+          limite=1; //limite de checks a seleccionar
+          num=0;
+          if (obj.checked) {
+            for (i=0; ele=document.getElementById(formu).children[i]; i++)
+              if (ele.checked) num++;
+          if (num>limite)
+            obj.checked=false;
+          }
+        }  
+        </script>
+
 
 
 <div class = "container-fluid" id = "123">
@@ -30,9 +45,6 @@
                       <div class="form-group col-md-6 text-right">
                         <label>Max</label>
                         <input type="text" class="form-control" placeholder="$25000" id="inputMax">
-                        <br>
-
-                        <button id = "button-filterByPrice" type="button" class="btn btn-secondary" (click) = "getPaseadoresFiltroPrecio()">Buscar</button>
 
                       </div>
                       </div>
@@ -43,30 +55,31 @@
                   <header class="card-header">
                       <h6 class="title" style = "font-size: 16px">Filtrar por zona</h6>
                   </header>
-                  <div class="filter-content">
+                  <div class="filter-content" >
                       <div class="car d-body">
                           <div class="custom-control custom-checkbox">
-                                  <span class="float-right badge badge-light round">57</span>
-                                <input type="checkbox" class="custom-control-input" id="Check1">
-                                <label class="custom-control-label" for="Check1"> &nbsp;&nbsp;&nbsp; Suba</label>
+
+                                  <span class="float-right badge badge-light round" id = "suba"></span>
+                                <input type="radio" name="joke" (click) = "setZona('suba')">
+                                <label> &nbsp;&nbsp;&nbsp; Suba</label>
                           </div> <!-- form-check.// -->
           
                           <div class="custom-control custom-checkbox">
-                              <span class="float-right badge badge-light round">132</span>
-                                <input type="checkbox" class="custom-control-input" id="Check2">
-                               <label class="custom-control-label" for="Check2">&nbsp;&nbsp;&nbsp; Usaquen</label>
+                              <span class="float-right badge badge-light round" id = "usaquen"></span>
+                                <input type="radio"  name="joke" (click) = "setZona('usaquen')">
+                               <label>&nbsp;&nbsp;&nbsp; Usaquen</label>
                           </div> <!-- form-check.// -->
           
                           <div class="custom-control custom-checkbox">
-                              <span class="float-right badge badge-light round">17</span>
-                                <input type="checkbox" class="custom-control-input" id="Check3">
-                                <label class="custom-control-label" for="Check3">&nbsp;&nbsp;&nbsp; Chapinero</label>
+                              <span class="float-right badge badge-light round" id = "chapinero"></span>
+                                <input type="radio"  name="joke" (click) = "setZona('chapinero')">
+                                <label>&nbsp;&nbsp;&nbsp; Chapinero</label>
                           </div> <!-- form-check.// -->
           
                           <div class="custom-control custom-checkbox">
-                              <span class="float-right badge badge-light round">7</span>
-                                <input type="checkbox" class="custom-control-input" id="Check4">
-                                <label class="custom-control-label" for="Check4">&nbsp;&nbsp;&nbsp; Fontibon</label>
+                              <span class="float-right badge badge-light round" id = "fontibon"></span>
+                                <input type="radio"  name="joke" (click) = "setZona('fontibon')">
+                                <label>&nbsp;&nbsp;&nbsp; Fontibon</label>
                           </div> <!-- form-check.// -->
                       </div> <!-- card-body.// -->
                   </div>
@@ -74,60 +87,56 @@
           </div> <!-- card.// -->
     
           <div class="card">
+                <article class="card-group-item">
+
+                        <header class="card-header">
+                                <h6 class="title" style = "font-size: 16px">Filtrar por calificacion</h6>
+                            </header>
               
-                  <div class="container">
-                          <h6 class="page-header" style = "font-size: 16px">Filtrar por califiación</h6>
-                          <div class="row">
-                            <div class="col-sm-12">
-    
-                              <div class= "row">
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
-                                       <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
-                                  <img style= "height: 30px" src="https://image.flaticon.com/icons/png/512/22/22744.png" alt="Responsive image">
-                              </div>
-    
-                          </div>
-                          </div>
-                          <br />
+
+                        <div class="container-fluid">
+                                <div class="row">
+                                <div class="rating">
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                  <input type="radio" id="star5" name="rating" value="5" (click) = "setNumHuella(5)"/><label for="star5" title="Excelente">5 stars</label>
+                                  &nbsp;
+                                  &nbsp;
+                                  &nbsp;
+                                  <input type="radio" id="star4" name="rating" value="4" (click) = "setNumHuella(4)"/><label for="star4" title="Bueno">4 stars</label>
+                                  &nbsp;
+                                  &nbsp;
+                                  &nbsp;
+                                  <input type="radio" id="star3" name="rating" value="3" (click) = "setNumHuella(3)"/><label for="star3" title="Regular">3 stars</label>
+                                  &nbsp;
+                                  &nbsp;
+                                  &nbsp;
+                                  <input type="radio" id="star2" name="rating" value="2" (click) = "setNumHuella(2)"/><label for="star2" title="Meh">2 stars</label>
+                                  &nbsp;
+                                  &nbsp;
+                                  &nbsp;
+                                  <input type="radio" id="star1" name="rating" value="1" (click) = "setNumHuella(1)"/><label for="star1" title="Pesimo">1 star</label>
+                                  &nbsp;
+                                  &nbsp;
+                                  &nbsp;
+                                  &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                </div>
+                                </div>
                         </div>
-    
+
+                
+                </article>
+
+
+                <button id = "button-filterByPrice" type="button" class="btn btn-secondary" (click) = "getPaseadoresFiltroPrecio()">Buscar</button>
+                <button id = "reset" type="button" class="btn btn-light" (click) = "reiniciar()">Reiniciar busqueda</button>
     
           </div>
         </div>

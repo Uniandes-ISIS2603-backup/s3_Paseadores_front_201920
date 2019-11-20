@@ -4,6 +4,7 @@ import { ActivatedRoute, Params } from "@angular/router";
 import { PaseadorService } from '../paseador.service';
 import { PaseadorDetail } from '../paseador-detail';
 
+
 @Component({
   selector: 'app-paseador-detail',
   templateUrl: './paseador-detail.component.html',
@@ -33,6 +34,7 @@ export class PaseadorDetailComponent implements OnInit {
     ngOnInit() {
       this.paseador_id = +this.route.snapshot.paramMap.get('id');
       this.paseadorDetail = new PaseadorDetail();
+
       this.getPaseadorDetail();
     }
 
