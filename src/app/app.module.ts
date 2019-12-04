@@ -19,22 +19,13 @@ import { PagoModule } from './pago/pago.module';
 import { LoginComponent } from './login/login.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { ZonaModule } from './zona/zona.module';
-<<<<<<< HEAD
 import { HomeModule } from './home/home.module';
-=======
-import { MascotaModule } from './mascota/mascota.module';
-
->>>>>>> 0c210b6709246ef2996df405b3aa9773df65b6ad
 
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c210b6709246ef2996df405b3aa9773df65b6ad
     ],
     imports: [
 
