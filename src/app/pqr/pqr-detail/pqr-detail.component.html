@@ -1,0 +1,50 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans" rel="stylesheet"> 
+
+<section class = "hack">
+<div class = "container">
+  <div class = "row">
+<div class = "col-1"></div>
+<div class = "col-10">
+<form>
+  <br>
+  <div class="form-group">
+    <br><br> <br><br> <br><br>
+    <label for="exampleFormControlInput1">Nombre</label>
+    <input type="name" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="form-group">
+      <label for="exampleFormControlInput1">Dirección de correo electrónico (opcional)</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1">
+    </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Categoría</label>
+    <select class="form-control" id="exampleFormControlSelect1" placeholder = "¿Por qué nos estás contactando?">
+      <option>Pregunta de usuario</option>
+      <option>Pregunta de paseador</option>
+      <option>Reporte de problemas</option>
+      <option>Problema accediendo a la cuenta</option>
+      <option>Error en el pago del paseo</option>
+      <option>Petición/reclamo específico</option>
+      <option>Otro</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Mensaje:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" (click) = "mostrarAlertaEnvio()">Enviar</button>
+  </div>
+</form>
+<div class = "col-1">
+</div>
+</div>
+</div>
+</div>
+</section>
+

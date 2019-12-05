@@ -17,6 +17,8 @@ import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail
 import { ZonaListComponent } from '../zona/zona-list/zona-list.component';
 import { ZonaDetailComponent } from '../zona/zona-detail/zona-detail.component'
 import { HomeComponent } from '../home/home/home.component';
+import { CentroAyudaDetailComponent } from '../centro-ayuda/centro-ayuda-detail/centro-ayuda-detail.component';
+import { PqrDetailComponent } from '../pqr/pqr-detail/pqr-detail.component'
 
 const routes: Routes = [
 
@@ -109,6 +111,25 @@ children: [{
     {
       path:'home',
       component: HomeComponent
+    }
+  ]
+},
+
+{
+  path: 'centro',
+  children: [
+    {
+      path:'pqa',
+      component: CentroAyudaDetailComponent
+    }
+  ]
+},
+{
+  path: 'atencion',
+  children: [
+    {
+      path:'pqr',
+      component: PqrDetailComponent
     }
   ]
 }

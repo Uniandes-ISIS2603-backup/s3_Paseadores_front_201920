@@ -20,6 +20,8 @@ import { LoginComponent } from './login/login.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { ZonaModule } from './zona/zona.module';
 import { HomeModule } from './home/home.module';
+import { CentroAyudaModule } from './centro-ayuda/centro-ayuda.module';
+import { PqrModule } from './pqr/pqr.module';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { HomeModule } from './home/home.module';
         PagoModule,
         PaseadorModule,
         ClienteModule,
+        CentroAyudaModule,
+        PqrModule,
         ZonaModule,
         BrowserModule,
         AppRoutingModule,
