@@ -17,6 +17,7 @@ import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail
 import { ZonaListComponent } from '../zona/zona-list/zona-list.component';
 import { ZonaDetailComponent } from '../zona/zona-detail/zona-detail.component'
 import { HomeComponent } from '../home/home/home.component';
+import { IniciarsesionComponent } from '../iniciarsesion/iniciarsesion.component';
 
 const routes: Routes = [
 
@@ -111,8 +112,17 @@ children: [{
       component: HomeComponent
     }
   ]
-}
+},
 
+{
+  path: 'iniciar',
+  children: [
+    {
+      path:'sesion',
+      component: IniciarsesionComponent
+    }
+  ]
+}
 
   ];
 

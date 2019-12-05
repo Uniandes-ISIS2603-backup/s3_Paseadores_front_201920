@@ -20,12 +20,14 @@ import { LoginComponent } from './login/login.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { ZonaModule } from './zona/zona.module';
 import { HomeModule } from './home/home.module';
+import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent
+        LoginComponent,
+        IniciarsesionComponent
     ],
     imports: [
 
