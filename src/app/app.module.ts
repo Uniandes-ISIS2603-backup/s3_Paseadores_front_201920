@@ -21,6 +21,8 @@ import { ClienteModule } from './cliente/cliente.module';
 import { ZonaModule } from './zona/zona.module';
 import { HomeModule } from './home/home.module';
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
+import { CentroAyudaModule } from './centro-ayuda/centro-ayuda.module';
+import { PqrModule } from './pqr/pqr.module';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component'
         PagoModule,
         PaseadorModule,
         ClienteModule,
+        CentroAyudaModule,
+        PqrModule,
         ZonaModule,
         BrowserModule,
         AppRoutingModule,

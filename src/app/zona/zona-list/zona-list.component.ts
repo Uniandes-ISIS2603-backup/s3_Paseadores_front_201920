@@ -42,7 +42,7 @@ export class ZonaListComponent implements OnInit {
         this.zona = zona;
         this.create.emit();
         this.toastrService.success("The Zone was created", "Zone creation");
-          alert("Zona creado con exito!");
+          alert("Zona creada con exito!");
       },
       err => {
 
